@@ -9,7 +9,10 @@
 #import "SysViewController.h"
 #import "TableViewViewController.h"
 
-@interface SysViewController ()
+@interface SysViewController ()<UISearchBarDelegate>
+
+@property (nonatomic,strong)UILabel * mlabel;
+@property (nonatomic,strong)UIButton * mbutton;
 
 @end
 
@@ -27,11 +30,12 @@
     [btn setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
     [btn addTarget:self action:@selector(popBtnClick) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:btn];
-    
+    self.mbutton = btn;
     
     UILabel * label = [[UILabel alloc]initWithFrame:CGRectMake(30, 100, 100, 30)];
     label.text = @"dfdl 我";
     [self.view addSubview:label];
+    self.mlabel = label;
     
     UIImageView * imageView = [[UIImageView alloc]initWithFrame:CGRectMake(30, 150, 100, 100)];
     imageView.image = [UIImage imageNamed:@"general_top_icon_back_normal_ios"];
@@ -46,7 +50,25 @@
     [self.view addSubview:btn];
     
     
+    btn = [UIButton buttonWithType:UIButtonTypeCustom];
+    [btn setTitle:@"tableview" forState:UIControlStateNormal];
+    btn.frame = CGRectMake(30, 300, 100, 30);
+    [btn setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
+    [btn addTarget:self action:@selector(tableviewBtnClick) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:btn];
+    
+    UISearchBar * bar = [[UISearchBar alloc]initWithFrame:CGRectMake(30, 350, 200, 30)];
+    bar.placeholder = @"搜索";
+    [self.view addSubview:bar];
+    bar.delegate = self;
+    
 }
+
+
+- (void)searchBarTextDidEndEditing:(UISearchBar *)searchBar {
+    
+}
+
 
 
 - (void)tableviewBtnClick{
@@ -59,6 +81,19 @@
     [self.navigationController dismissViewControllerAnimated:YES completion:^{
         
     }];
+}
+
+
+- (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar{
+    
+    [searchBar resignFirstResponder];
+    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        
+        UIAccessibilityPostNotification(UIAccessibilityScreenChangedNotification, self.mlabel);
+        
+        
+    });
 }
 
 - (void)didReceiveMemoryWarning {

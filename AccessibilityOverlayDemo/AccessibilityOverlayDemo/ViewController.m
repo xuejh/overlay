@@ -36,7 +36,8 @@
     [self.view addSubview:btn];
     
     
-
+    UISlider *slider = [[UISlider alloc]initWithFrame:CGRectMake(0, 400,320 , 20)];
+    [self.view addSubview:slider];
     
 }
 
