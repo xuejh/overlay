@@ -14,6 +14,7 @@
 @property (nonatomic,strong)UILabel * mlabel;
 @property (nonatomic,strong)UIButton * mbutton;
 
+
 @end
 
 @implementation SysViewController
@@ -57,10 +58,17 @@
     [btn addTarget:self action:@selector(tableviewBtnClick) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:btn];
     
+    
+    
+    
+    
+    
     UISearchBar * bar = [[UISearchBar alloc]initWithFrame:CGRectMake(30, 350, 200, 30)];
     bar.placeholder = @"搜索";
     [self.view addSubview:bar];
     bar.delegate = self;
+    
+    
     
 }
 
@@ -88,6 +96,7 @@
     
     [searchBar resignFirstResponder];
     
+    //设置元素焦点
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         
         UIAccessibilityPostNotification(UIAccessibilityScreenChangedNotification, self.mlabel);

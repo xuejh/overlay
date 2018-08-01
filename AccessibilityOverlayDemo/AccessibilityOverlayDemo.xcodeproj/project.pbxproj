@@ -22,6 +22,9 @@
 		F27EA8E020E4B88E0010BC5A /* elearning_popup_icon_search_normal@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F27EA8DF20E4B88E0010BC5A /* elearning_popup_icon_search_normal@2x.png */; };
 		F27EA8E320E4BB500010BC5A /* TableViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F27EA8E220E4BB4F0010BC5A /* TableViewViewController.m */; };
 		F27EA8E620E4BEA20010BC5A /* MyTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F27EA8E520E4BEA20010BC5A /* MyTableViewCell.m */; };
+		F28D493E211184EA0054A5EB /* CustomView.m in Sources */ = {isa = PBXBuildFile; fileRef = F28D493D211184EA0054A5EB /* CustomView.m */; };
+		F28D494121118BD80054A5EB /* CustomView1.m in Sources */ = {isa = PBXBuildFile; fileRef = F28D494021118BD80054A5EB /* CustomView1.m */; };
+		F28D494421118E740054A5EB /* DrawView.m in Sources */ = {isa = PBXBuildFile; fileRef = F28D494321118E740054A5EB /* DrawView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +51,12 @@
 		F27EA8E220E4BB4F0010BC5A /* TableViewViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TableViewViewController.m; sourceTree = "<group>"; };
 		F27EA8E420E4BEA20010BC5A /* MyTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyTableViewCell.h; sourceTree = "<group>"; };
 		F27EA8E520E4BEA20010BC5A /* MyTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyTableViewCell.m; sourceTree = "<group>"; };
+		F28D493C211184EA0054A5EB /* CustomView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomView.h; sourceTree = "<group>"; };
+		F28D493D211184EA0054A5EB /* CustomView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomView.m; sourceTree = "<group>"; };
+		F28D493F21118BD80054A5EB /* CustomView1.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomView1.h; sourceTree = "<group>"; };
+		F28D494021118BD80054A5EB /* CustomView1.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomView1.m; sourceTree = "<group>"; };
+		F28D494221118E740054A5EB /* DrawView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DrawView.h; sourceTree = "<group>"; };
+		F28D494321118E740054A5EB /* DrawView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DrawView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +107,12 @@
 				F27EA8E220E4BB4F0010BC5A /* TableViewViewController.m */,
 				F27EA8E420E4BEA20010BC5A /* MyTableViewCell.h */,
 				F27EA8E520E4BEA20010BC5A /* MyTableViewCell.m */,
+				F28D493C211184EA0054A5EB /* CustomView.h */,
+				F28D493D211184EA0054A5EB /* CustomView.m */,
+				F28D493F21118BD80054A5EB /* CustomView1.h */,
+				F28D494021118BD80054A5EB /* CustomView1.m */,
+				F28D494221118E740054A5EB /* DrawView.h */,
+				F28D494321118E740054A5EB /* DrawView.m */,
 			);
 			path = AccessibilityOverlayDemo;
 			sourceTree = "<group>";
@@ -192,9 +207,12 @@
 			files = (
 				F27EA8C820E486550010BC5A /* SysViewController.m in Sources */,
 				F27EA8E620E4BEA20010BC5A /* MyTableViewCell.m in Sources */,
+				F28D494121118BD80054A5EB /* CustomView1.m in Sources */,
 				F27EA8CB20E4AC070010BC5A /* CustomViewController.m in Sources */,
+				F28D494421118E740054A5EB /* DrawView.m in Sources */,
 				F27EA8B520E485040010BC5A /* ViewController.m in Sources */,
 				F27EA8C020E485040010BC5A /* main.m in Sources */,
+				F28D493E211184EA0054A5EB /* CustomView.m in Sources */,
 				F27EA8E320E4BB500010BC5A /* TableViewViewController.m in Sources */,
 				F27EA8B220E485040010BC5A /* AppDelegate.m in Sources */,
 			);
